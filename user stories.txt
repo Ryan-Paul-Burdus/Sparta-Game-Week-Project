@@ -1,0 +1,15 @@
+User stories
+
+- As the player I will collect coins that are found around the level/s which will add to their score
+- As the player I will use special platforms to change the colour of their character 
+- I will use the menu system to show scores, change settings, and launch into the game
+- As the player I will avoid obstacles in order to stay alive 
+- When playing I will only have a total of 3 lives before having the game over screen being shown
+- When playing I will find the key within the level and finish the level by then leaving through a specific door 
+- As the player I will avoid being shot by the turrets that are found around the level by hiding from their sight
+- As the player I will have the option to play either on my own or with one other player in local co-op
+- As the player I will be able to shoot back at the enemies with a number of guns 
+- I will have to also defeat all of a certain enemy before being able to leave to the next level
+- As the player I will be able to leave the game at any point with the use of a pause menu 
+- As the player I will be able to pick-up health kits to gain some health
+- As the player I will be able to pick-up ammo kits to gain some ammo
