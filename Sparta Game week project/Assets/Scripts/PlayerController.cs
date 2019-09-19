@@ -20,11 +20,18 @@ public class PlayerController : MonoBehaviour
     public GameObject orangeBorder;
     public GameObject greenBorder;
     public GameObject blueBorder;
+    public GameObject baseBorder;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         onGround = true;
+
+        redBorder.SetActive(false);
+        greenBorder.SetActive(false);
+        blueBorder.SetActive(false);
+        orangeBorder.SetActive(false);
+        baseBorder.SetActive(true);
     }
 
     void Update()
@@ -88,6 +95,7 @@ public class PlayerController : MonoBehaviour
             greenBorder.SetActive(false);
             blueBorder.SetActive(true);
             orangeBorder.SetActive(false);
+            baseBorder.SetActive(false);
         }
         if (collision.gameObject.name == "Red color-changing platform")
         {
@@ -95,6 +103,7 @@ public class PlayerController : MonoBehaviour
             greenBorder.SetActive(false);
             blueBorder.SetActive(false);
             orangeBorder.SetActive(false);
+            baseBorder.SetActive(false);
         }
         if (collision.gameObject.name == "Orange color-changing platform")
         {
@@ -102,6 +111,7 @@ public class PlayerController : MonoBehaviour
             greenBorder.SetActive(false);
             blueBorder.SetActive(false);
             orangeBorder.SetActive(true);
+            baseBorder.SetActive(false);
         }
         if (collision.gameObject.name == "Green color-changing platform")
         {
@@ -109,6 +119,7 @@ public class PlayerController : MonoBehaviour
             greenBorder.SetActive(true);
             blueBorder.SetActive(false);
             orangeBorder.SetActive(false);
+            baseBorder.SetActive(false);
         }
     }
 }
