@@ -16,6 +16,11 @@ public class PlayerController : MonoBehaviour
     public static bool isCrouching = false;
     private bool isRunning = false;
 
+    public GameObject redBorder;
+    public GameObject orangeBorder;
+    public GameObject greenBorder;
+    public GameObject blueBorder;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -75,6 +80,35 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             onGround = true;
+        }
+
+        if (collision.gameObject.name == "Blue color-changing platform")
+        {
+            redBorder.SetActive(false);
+            greenBorder.SetActive(false);
+            blueBorder.SetActive(true);
+            orangeBorder.SetActive(false);
+        }
+        if (collision.gameObject.name == "Red color-changing platform")
+        {
+            redBorder.SetActive(true);
+            greenBorder.SetActive(false);
+            blueBorder.SetActive(false);
+            orangeBorder.SetActive(false);
+        }
+        if (collision.gameObject.name == "Orange color-changing platform")
+        {
+            redBorder.SetActive(false);
+            greenBorder.SetActive(false);
+            blueBorder.SetActive(false);
+            orangeBorder.SetActive(true);
+        }
+        if (collision.gameObject.name == "Green color-changing platform")
+        {
+            redBorder.SetActive(false);
+            greenBorder.SetActive(true);
+            blueBorder.SetActive(false);
+            orangeBorder.SetActive(false);
         }
     }
 }

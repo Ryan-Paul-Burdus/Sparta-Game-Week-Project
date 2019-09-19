@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 3579031309217676566}
   - component: {fileID: 3579031309217676561}
   m_Layer: 0
-  m_Name: platform
+  m_Name: Orange color-changing platform
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
