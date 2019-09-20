@@ -57,7 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c5e63165e09c6f4e91a0d4ea0b251ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ySpeed: 0.7
+  ySpeed: 0.9
 --- !u!1001 &7379266733235234573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71,41 +71,6 @@ PrefabInstance:
       value: coin
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 588ce0cd50b940348afa960dc0a1bee8,
-        type: 3}
-      propertyPath: m_TagString
-      value: Coin
-      objectReference: {fileID: 0}
-    - target: {fileID: -8470045053010906745, guid: 588ce0cd50b940348afa960dc0a1bee8,
-        type: 3}
-      propertyPath: m_TagString
-      value: Coin
-      objectReference: {fileID: 0}
-    - target: {fileID: -7882094398197259057, guid: 588ce0cd50b940348afa960dc0a1bee8,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 064fb529aca2b7a4aa31af360c457151, type: 2}
-    - target: {fileID: -7673886404300160364, guid: 588ce0cd50b940348afa960dc0a1bee8,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 084edd25713d6dc4db47fcc00d15d1c5, type: 2}
-    - target: {fileID: -7391105858175201956, guid: 588ce0cd50b940348afa960dc0a1bee8,
-        type: 3}
-      propertyPath: m_TagString
-      value: Coin
-      objectReference: {fileID: 0}
-    - target: {fileID: -6054058774237248251, guid: 588ce0cd50b940348afa960dc0a1bee8,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 084edd25713d6dc4db47fcc00d15d1c5, type: 2}
-    - target: {fileID: -5259225927154676129, guid: 588ce0cd50b940348afa960dc0a1bee8,
-        type: 3}
-      propertyPath: m_TagString
-      value: Coin
-      objectReference: {fileID: 0}
-    - target: {fileID: -4540539275945913696, guid: 588ce0cd50b940348afa960dc0a1bee8,
         type: 3}
       propertyPath: m_TagString
       value: Coin
@@ -179,6 +144,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8470045053010906745, guid: 588ce0cd50b940348afa960dc0a1bee8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: -7882094398197259057, guid: 588ce0cd50b940348afa960dc0a1bee8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 064fb529aca2b7a4aa31af360c457151, type: 2}
+    - target: {fileID: -7673886404300160364, guid: 588ce0cd50b940348afa960dc0a1bee8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 084edd25713d6dc4db47fcc00d15d1c5, type: 2}
+    - target: {fileID: -7391105858175201956, guid: 588ce0cd50b940348afa960dc0a1bee8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: -6054058774237248251, guid: 588ce0cd50b940348afa960dc0a1bee8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 084edd25713d6dc4db47fcc00d15d1c5, type: 2}
+    - target: {fileID: -5259225927154676129, guid: 588ce0cd50b940348afa960dc0a1bee8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: -4540539275945913696, guid: 588ce0cd50b940348afa960dc0a1bee8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 748748645750174535, guid: 588ce0cd50b940348afa960dc0a1bee8,
         type: 3}
