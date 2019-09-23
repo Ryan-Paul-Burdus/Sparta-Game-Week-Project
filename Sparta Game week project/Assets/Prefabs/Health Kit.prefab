@@ -76,6 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c5e63165e09c6f4e91a0d4ea0b251ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ySpeed: 0.4
 --- !u!1001 &4059530602688129064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83,26 +84,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5857512323061672621}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: d58af1da749c7744eb0daa55eac2a805,
-        type: 3}
-      propertyPath: m_Name
-      value: health kit
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: d58af1da749c7744eb0daa55eac2a805,
-        type: 3}
-      propertyPath: m_TagString
-      value: Health
-      objectReference: {fileID: 0}
-    - target: {fileID: -8427278564241453146, guid: d58af1da749c7744eb0daa55eac2a805,
-        type: 3}
-      propertyPath: m_TagString
-      value: Health
-      objectReference: {fileID: 0}
-    - target: {fileID: -4497984273362608633, guid: d58af1da749c7744eb0daa55eac2a805,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 4a47cd638a248944fb037da2554a3c96, type: 2}
     - target: {fileID: -4216859302048453862, guid: d58af1da749c7744eb0daa55eac2a805,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -173,12 +154,27 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.4
       objectReference: {fileID: 0}
-    - target: {fileID: -1613622149001398629, guid: d58af1da749c7744eb0daa55eac2a805,
+    - target: {fileID: -927199367670048503, guid: d58af1da749c7744eb0daa55eac2a805,
+        type: 3}
+      propertyPath: m_Name
+      value: health kit
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d58af1da749c7744eb0daa55eac2a805,
+        type: 3}
+      propertyPath: m_TagString
+      value: Health
+      objectReference: {fileID: 0}
+    - target: {fileID: -8427278564241453146, guid: d58af1da749c7744eb0daa55eac2a805,
         type: 3}
       propertyPath: m_TagString
       value: Health
       objectReference: {fileID: 0}
     - target: {fileID: 326680701022325867, guid: d58af1da749c7744eb0daa55eac2a805,
+        type: 3}
+      propertyPath: m_TagString
+      value: Health
+      objectReference: {fileID: 0}
+    - target: {fileID: -1613622149001398629, guid: d58af1da749c7744eb0daa55eac2a805,
         type: 3}
       propertyPath: m_TagString
       value: Health
@@ -193,6 +189,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 29f1ed9e82d04b447855dfb56e245f43, type: 2}
+    - target: {fileID: -4497984273362608633, guid: d58af1da749c7744eb0daa55eac2a805,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4a47cd638a248944fb037da2554a3c96, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d58af1da749c7744eb0daa55eac2a805, type: 3}
 --- !u!1 &5438013559571411233 stripped

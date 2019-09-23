@@ -9,8 +9,8 @@ public class CameraFunctions : MonoBehaviour
     private float maxXAngle = 60f;
 
     //values for the cameras sensitivity
-    private float xSensitivity = 1.5f;
-    private float ySensitivity = 1.5f;
+    private float xSensitivity = 2.5f;
+    private float ySensitivity = 2.5f;
 
     //gets the camera object 
     public Camera playerCam;

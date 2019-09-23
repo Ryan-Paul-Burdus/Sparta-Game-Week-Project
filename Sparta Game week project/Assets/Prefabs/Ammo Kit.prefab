@@ -44,6 +44,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c5e63165e09c6f4e91a0d4ea0b251ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ySpeed: 0.4
+--- !u!65 &3109735819988258686
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7992501129706938951}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.7372919, z: 2.6329658}
+  m_Center: {x: 0, y: 0.7729518, z: 0.020908564}
 --- !u!95 &2113838638379449734
 Animator:
   serializedVersion: 3
@@ -63,19 +77,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &3109735819988258686
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7992501129706938951}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.7372919, z: 2.6329658}
-  m_Center: {x: 0, y: 0.7729518, z: 0.020908564}
 --- !u!1001 &2146805764740119374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83,31 +84,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3500738997051052230}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: a0f85ed96b3e24c4da2710c5d3e193cf,
-        type: 3}
-      propertyPath: m_Name
-      value: ammo kit
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: a0f85ed96b3e24c4da2710c5d3e193cf,
-        type: 3}
-      propertyPath: m_TagString
-      value: Ammo
-      objectReference: {fileID: 0}
-    - target: {fileID: -7100524293826984481, guid: a0f85ed96b3e24c4da2710c5d3e193cf,
-        type: 3}
-      propertyPath: m_TagString
-      value: Ammo
-      objectReference: {fileID: 0}
-    - target: {fileID: -6584199380414124468, guid: a0f85ed96b3e24c4da2710c5d3e193cf,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b261c46b35b9aef4988dd23b74fac0cc, type: 2}
-    - target: {fileID: -6399157241168359602, guid: a0f85ed96b3e24c4da2710c5d3e193cf,
-        type: 3}
-      propertyPath: m_TagString
-      value: Ammo
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a0f85ed96b3e24c4da2710c5d3e193cf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -178,7 +154,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3
       objectReference: {fileID: 0}
-    - target: {fileID: -2684824105629031874, guid: a0f85ed96b3e24c4da2710c5d3e193cf,
+    - target: {fileID: -927199367670048503, guid: a0f85ed96b3e24c4da2710c5d3e193cf,
+        type: 3}
+      propertyPath: m_Name
+      value: ammo kit
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a0f85ed96b3e24c4da2710c5d3e193cf,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ammo
+      objectReference: {fileID: 0}
+    - target: {fileID: -7100524293826984481, guid: a0f85ed96b3e24c4da2710c5d3e193cf,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ammo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244496556096631923, guid: a0f85ed96b3e24c4da2710c5d3e193cf,
         type: 3}
       propertyPath: m_TagString
       value: Ammo
@@ -188,27 +179,37 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ammo
       objectReference: {fileID: 0}
-    - target: {fileID: 1603612412206971952, guid: a0f85ed96b3e24c4da2710c5d3e193cf,
+    - target: {fileID: -6399157241168359602, guid: a0f85ed96b3e24c4da2710c5d3e193cf,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 925236304a27a664794a690519352fe8, type: 2}
+      propertyPath: m_TagString
+      value: Ammo
+      objectReference: {fileID: 0}
+    - target: {fileID: -2684824105629031874, guid: a0f85ed96b3e24c4da2710c5d3e193cf,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ammo
+      objectReference: {fileID: 0}
     - target: {fileID: 1636047879461782868, guid: a0f85ed96b3e24c4da2710c5d3e193cf,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 925236304a27a664794a690519352fe8, type: 2}
-    - target: {fileID: 2244496556096631923, guid: a0f85ed96b3e24c4da2710c5d3e193cf,
+    - target: {fileID: 1603612412206971952, guid: a0f85ed96b3e24c4da2710c5d3e193cf,
         type: 3}
-      propertyPath: m_TagString
-      value: Ammo
-      objectReference: {fileID: 0}
-    - target: {fileID: 5767974960422501358, guid: a0f85ed96b3e24c4da2710c5d3e193cf,
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 925236304a27a664794a690519352fe8, type: 2}
+    - target: {fileID: -6584199380414124468, guid: a0f85ed96b3e24c4da2710c5d3e193cf,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b261c46b35b9aef4988dd23b74fac0cc, type: 2}
     - target: {fileID: 6738256354080232897, guid: a0f85ed96b3e24c4da2710c5d3e193cf,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b261c46b35b9aef4988dd23b74fac0cc, type: 2}
+    - target: {fileID: 5767974960422501358, guid: a0f85ed96b3e24c4da2710c5d3e193cf,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

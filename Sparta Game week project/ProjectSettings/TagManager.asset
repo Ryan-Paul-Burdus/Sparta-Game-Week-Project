@@ -10,6 +10,17 @@ TagManager:
   - DeathObject
   - Coin
   - ColorBorder
+  - AmmoText
+  - Pistol
+  - SMG
+  - Key
+  - Wall
+  - Platform
+  - Door
+  - PlayerHolder
+  - Bullet
+  - Enemy
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
@@ -21,7 +32,7 @@ TagManager:
   - 
   - PostProcessing
   - PlayerExtraObjects
-  - 
+  - Player
   - 
   - 
   - 

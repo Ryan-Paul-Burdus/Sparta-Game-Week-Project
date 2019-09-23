@@ -84,11 +84,15 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //makes it so that anything with the tag "ground" will allow the player to jump
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Platform"))
         {
             onGround = true;
         }
+        colorSetter(collision);
+    }
 
+    public void colorSetter(Collision collision)
+    {
         if (collision.gameObject.name == "Blue color-changing platform")
         {
             redBorder.SetActive(false);
