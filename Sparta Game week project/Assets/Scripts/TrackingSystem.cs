@@ -23,7 +23,8 @@ public class TrackingSystem : MonoBehaviour
         {
             if (hit.collider.tag == "Wall" || hit.collider.tag == "Ground")
             {
-                lookAtRotation = Quaternion.LookRotation(Vector3.zero, Vector3.up);
+                lookAtRotation = Quaternion.Euler(0f, 1f, 1f);// LookRotation(Vector3.forward, Vector3.up);
+
                 if (transform.rotation != lookAtRotation)
                 {
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, lookAtRotation, speed * Time.deltaTime);

@@ -4,18 +4,29 @@ using UnityEngine.UI;
 public class AmmoController : MonoBehaviour
 {
     public Text ammoText;
-    
+    public GameObject PistolEmitter;
+    public GameObject SMGEmitter;
 
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Ammo"))
         {
-            //var shootingController = GetComponent<Shooting>();
-            other.gameObject.SetActive(false);
-            //shootingController totalAmmo += 10;
-            Destroy(other.gameObject);
-            //ammoText.text = "Ammo = " + shootingController.currentAmmo + "/" + shootingController.maxClipSize;
+            if (PistolEmitter.activeSelf)
+            {
+                var shootingScript = PistolEmitter.GetComponent<Shooting>();
+                shootingScript.AddTotalAmmo(10);
+                other.gameObject.SetActive(false);
+                Destroy(other.gameObject);
+            }
+            if (SMGEmitter.activeSelf)
+            {
+                var shootingScript = SMGEmitter.GetComponent<Shooting>();
+                shootingScript.AddTotalAmmo(10);
+                other.gameObject.SetActive(false);
+                Destroy(other.gameObject);
+            }
+            
         }
     }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6306058392120502998}
   m_Layer: 0
   m_Name: low poly UZI
-  m_TagString: Untagged
+  m_TagString: SMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 8967557176147731363}
   m_Layer: 0
   m_Name: Bullet Emitter
-  m_TagString: Untagged
+  m_TagString: SMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,4 +147,5 @@ MonoBehaviour:
   gunType: SMG
   maxClipSize: 30
   currentAmmo: 30
+  totalAmmo: 70
   ammoText: {fileID: 0}

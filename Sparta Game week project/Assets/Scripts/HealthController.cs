@@ -25,6 +25,17 @@ public class HealthController : MonoBehaviour
             healthText.text = "Health = " + health;
         }
 
+        if (other.gameObject.CompareTag("DeathObject"))
+        {
+            if (canBeHit)
+            {
+                canBeHit = false;
+                health = 100;
+                playerDeath.alive = false;
+                healthText.text = "Health = " + health;
+            }
+        }
+
         if (other.gameObject.CompareTag("EnemyBullet"))
         {
             if (canBeHit)

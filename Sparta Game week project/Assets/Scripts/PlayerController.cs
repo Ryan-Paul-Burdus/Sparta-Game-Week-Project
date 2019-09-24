@@ -22,6 +22,9 @@ public class PlayerController : MonoBehaviour
     public GameObject blueBorder;
     public GameObject baseBorder;
 
+    public GameObject PistolEmitter;
+    public GameObject SMGEmitter;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -52,6 +55,8 @@ public class PlayerController : MonoBehaviour
                 onGround = false;
             }
         }
+
+        
     }
 
     private void FixedUpdate()

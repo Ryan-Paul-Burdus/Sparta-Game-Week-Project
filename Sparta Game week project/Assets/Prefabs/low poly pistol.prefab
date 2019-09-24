@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3989603291921231157}
   m_Layer: 0
   m_Name: Bullet emitter
-  m_TagString: Untagged
+  m_TagString: Pistol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,6 +48,7 @@ MonoBehaviour:
   gunType: Pistol
   maxClipSize: 8
   currentAmmo: 8
+  totalAmmo: 20
   ammoText: {fileID: 0}
 --- !u!1 &4934825992396056089
 GameObject:
@@ -63,7 +64,7 @@ GameObject:
   - component: {fileID: 2066408965019007344}
   m_Layer: 0
   m_Name: low poly pistol
-  m_TagString: Untagged
+  m_TagString: Pistol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

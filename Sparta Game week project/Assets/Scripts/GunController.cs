@@ -14,6 +14,8 @@ public class GunController : MonoBehaviour
         ammoTextObj = GameObject.FindGameObjectWithTag("AmmoText");
         ammoText = ammoTextObj.GetComponent<Text>();
         SelectWeapon();
+        var currentGun = gameObject.GetComponentInChildren<Shooting>();
+        ammoText.text = "Ammo = " + currentGun.currentAmmo + "/" + currentGun.totalAmmo;
     }
 
     
@@ -51,7 +53,7 @@ public class GunController : MonoBehaviour
             {
                 weapon.gameObject.SetActive(true);
                 var currentGun = gameObject.GetComponentInChildren<Shooting>();
-                ammoText.text = "Ammo = " + currentGun.currentAmmo + "/" + currentGun.maxClipSize;
+                ammoText.text = "Ammo = " + currentGun.currentAmmo + "/" + currentGun.totalAmmo;
             }
             else { weapon.gameObject.SetActive(false); }
             i++;

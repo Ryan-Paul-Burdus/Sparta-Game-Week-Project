@@ -16,6 +16,7 @@ public class Shooting : MonoBehaviour
     public string gunType;
     public int maxClipSize;
     public int currentAmmo;
+    public int totalAmmo;
 
     public Text ammoText;
     private GameObject ammoTextObj;
@@ -27,6 +28,12 @@ public class Shooting : MonoBehaviour
         ammoText =  ammoTextObj.GetComponent<Text>();
     }
 
+    public void AddTotalAmmo(int amountToAdd)
+    {
+        this.totalAmmo += amountToAdd;
+        ammoText.text = "Ammo = " + this.currentAmmo + "/" + this.totalAmmo;
+    }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && canShoot && !gunType.Equals("SMG"))
@@ -35,10 +42,7 @@ public class Shooting : MonoBehaviour
             if (currentAmmo > 0)
             {
                 StartCoroutine(Shoot());
-                this.currentAmmo--;
-                ammoText.text = "Ammo = " + currentAmmo + "/" + maxClipSize;
             }
-
             if (this.currentAmmo <= 0) { StartCoroutine(Reload()); }
         }
         if (Input.GetMouseButton(0) && canShoot && !gunType.Equals("Pistol"))
@@ -47,21 +51,21 @@ public class Shooting : MonoBehaviour
             if (currentAmmo > 0)
             {
                 StartCoroutine(Shoot());
-                this.currentAmmo--;
-                ammoText.text = "Ammo = " + currentAmmo + "/" + maxClipSize;
             }
+        }
 
-            if (this.currentAmmo <= 0)
-            {
-                StartCoroutine(Reload());
-            }
+        if (Input.GetKeyDown(KeyCode.R) || this.currentAmmo <= 0)
+        {
+            Debug.Log("R");
+            StartCoroutine(Reload());
         }
     }
 
     IEnumerator Shoot()
     {
         GameObject instBullet = Instantiate(bullet, transform.position, playerCamera.transform.rotation) as GameObject;
-
+        this.currentAmmo--;
+        ammoText.text = "Ammo = " + this.currentAmmo + "/" + this.totalAmmo;
         Rigidbody instBulletRb = instBullet.GetComponent<Rigidbody>();
         instBulletRb.AddForce(playerCamera.transform.forward * speed);
         Destroy(instBullet, 5f);
@@ -72,12 +76,32 @@ public class Shooting : MonoBehaviour
 
     IEnumerator Reload()
     {
-        canShoot = false;
-        yield return new WaitForSeconds(1f);
-        currentAmmo = maxClipSize;
-        ammoText.text = "Ammo = " + currentAmmo + "/" + maxClipSize;
-        yield return new WaitForSeconds(waitTime);
-        canShoot = true;
+        if (this.currentAmmo != this.maxClipSize)
+        {
+            canShoot = false;
+            yield return new WaitForSeconds(1f);
 
+            if (this.maxClipSize >= this.totalAmmo && (this.maxClipSize - this.currentAmmo) >= this.totalAmmo)
+            {
+                this.currentAmmo += this.totalAmmo;
+                this.totalAmmo = 0;
+            }
+            else
+            {
+                if (this.currentAmmo <= 0)
+                {
+                    this.totalAmmo -= this.maxClipSize;
+                }
+                else
+                {
+                    this.totalAmmo -= (this.maxClipSize - this.currentAmmo);
+                }
+                this.currentAmmo = this.maxClipSize;
+            }
+            
+            ammoText.text = "Ammo = " + this.currentAmmo + "/" + this.totalAmmo;
+            yield return new WaitForSeconds(waitTime);
+            canShoot = true;
+        }
     }
 }
