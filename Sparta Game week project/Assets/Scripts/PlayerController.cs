@@ -22,13 +22,13 @@ public class PlayerController : MonoBehaviour
     public GameObject blueBorder;
     public GameObject baseBorder;
 
-    public GameObject PistolEmitter;
-    public GameObject SMGEmitter;
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         onGround = true;
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
 
         redBorder.SetActive(false);
         greenBorder.SetActive(false);
@@ -55,8 +55,6 @@ public class PlayerController : MonoBehaviour
                 onGround = false;
             }
         }
-
-        
     }
 
     private void FixedUpdate()
@@ -92,6 +90,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Platform"))
         {
             onGround = true;
+            transform.localScale = new Vector3(1f, 1f, 1f);
         }
         colorSetter(collision);
     }

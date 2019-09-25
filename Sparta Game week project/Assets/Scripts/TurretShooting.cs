@@ -16,6 +16,9 @@ public class TurretShooting : MonoBehaviour
 
     private void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Player");
+        targetBody = target.transform.GetChild(0).gameObject;
+
         enemyHealthText = gameObject.GetComponentInChildren<TextMesh>();
         bulletSpawn = transform.GetChild(2).gameObject;
     }

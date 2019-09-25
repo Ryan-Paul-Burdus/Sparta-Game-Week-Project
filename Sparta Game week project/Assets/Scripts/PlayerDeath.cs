@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerDeath : MonoBehaviour
@@ -31,7 +32,9 @@ public class PlayerDeath : MonoBehaviour
             }
             if (lives < 0)
             {
-                //load the game over screen
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+                SceneManager.LoadScene("GameOverScreen");
             }
         }
     }
@@ -41,7 +44,6 @@ public class PlayerDeath : MonoBehaviour
         if (collision.gameObject.CompareTag("DeathObject"))
         {
             alive = false;
-            
         }
         else
         {

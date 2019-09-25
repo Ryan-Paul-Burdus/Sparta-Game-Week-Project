@@ -13,10 +13,17 @@ public class MovingPlatform : MonoBehaviour
 
     private Transform parent;
 
+    public GameObject playerAttacher;
+
     private void Start()
     {
+        this.GetComponent<BoxCollider>().enabled = true;
+
         playerHolder = GameObject.FindGameObjectWithTag("PlayerHolder");
-        parent = transform.parent;
+        this.parent = this.transform.parent;
+
+        playerAttacher = this.transform.GetChild(1).gameObject;
+
         position1 = parent.GetChild(1).gameObject;
         position2 = parent.GetChild(2).gameObject;
         transform.position = position1.transform.position;
@@ -24,6 +31,7 @@ public class MovingPlatform : MonoBehaviour
 
     private void Update()
     {
+        this.GetComponent<BoxCollider>().enabled = true;
 
         if (transform.position == position1.transform.position)
         {
@@ -42,7 +50,7 @@ public class MovingPlatform : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.transform.parent = transform;
+            other.transform.parent = playerAttacher.transform;
         }
     }
 

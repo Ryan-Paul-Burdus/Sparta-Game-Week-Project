@@ -5,7 +5,7 @@ using UnityEngine;
 public class TrackingSystem : MonoBehaviour
 {
     private float speed = 50f;
-    public GameObject target = null;
+    public GameObject target;
     public GameObject targetBody;
     Vector3 lastKnownPosition = Vector3.zero;
     Quaternion lookAtRotation;
@@ -13,6 +13,9 @@ public class TrackingSystem : MonoBehaviour
 
     private void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Player");
+        targetBody = target.transform.GetChild(0).gameObject;
+
         bulletSpawn = transform.GetChild(2).gameObject;
     }
 
