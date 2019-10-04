@@ -1,4 +1,4 @@
-# Sparta-Game-Week-Project
+# Sparta-Game-Week-Project - Created by Ryan Burdus, 16/09/2019
  Game made in the game week of training at Sparta Global. 
  This game is a first person puzzle game created in Unity with C# where the main features of the game are:
  - platforms that change your players color to the platforms color on collision. 
