@@ -9,8 +9,8 @@ public class CameraFunctions : MonoBehaviour
     private float maxXAngle = 60f;
 
     //values for the cameras sensitivity
-    private float xSensitivity = 2.5f;
-    private float ySensitivity = 2.5f;
+    private float xSensitivity = 1.5f;
+    private float ySensitivity = 1.5f;
 
     //gets the camera object 
     public Camera playerCam;
@@ -28,8 +28,16 @@ public class CameraFunctions : MonoBehaviour
 
     void Update()
     {
-        yRot += Input.GetAxis("Mouse X") * ySensitivity;
-        xRot += Input.GetAxis("Mouse Y") * xSensitivity;
+        if (MenuSystem.isPaused)
+        {
+            yRot += Input.GetAxis("Mouse X") * 0f;
+            xRot += Input.GetAxis("Mouse Y") * 0f;
+        }
+        else
+        {
+            yRot += Input.GetAxis("Mouse X") * ySensitivity;
+            xRot += Input.GetAxis("Mouse Y") * xSensitivity;
+        }
 
         //this keeps the player from looking further than a certain angle in the x direction
         xRot = Mathf.Clamp(xRot, minXAngle, maxXAngle);

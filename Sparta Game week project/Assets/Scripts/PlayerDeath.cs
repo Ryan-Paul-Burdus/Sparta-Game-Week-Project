@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System;
+using System.IO;
 
 public class PlayerDeath : MonoBehaviour
 {
@@ -10,9 +12,16 @@ public class PlayerDeath : MonoBehaviour
     public Text healthText;
     HealthController healthController;
 
+    string fileName = "Scores.txt";
+    CoinController coinController;
+    
+
     void Start()
     {
         healthController = gameObject.GetComponent<HealthController>();
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        coinController = player.GetComponent<CoinController>();
 
         alive = true;
         lives = 3;
@@ -32,6 +41,8 @@ public class PlayerDeath : MonoBehaviour
             }
             if (lives < 0)
             {
+                if (!File.Exists(fileName)) { File.WriteAllText(fileName, $"{coinController.score}"); }
+                File.AppendAllText(fileName, $"\n\n{coinController.score}");
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
                 SceneManager.LoadScene("GameOverScreen");

@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     public static bool isCrouching = false;
     private bool isRunning = false;
 
+    
+
+
     public GameObject redBorder;
     public GameObject orangeBorder;
     public GameObject greenBorder;
@@ -55,6 +58,8 @@ public class PlayerController : MonoBehaviour
                 onGround = false;
             }
         }
+
+        
     }
 
     private void FixedUpdate()

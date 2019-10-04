@@ -9,6 +9,7 @@ public class TrackingSystem : MonoBehaviour
     public GameObject targetBody;
     Vector3 lastKnownPosition = Vector3.zero;
     Quaternion lookAtRotation;
+    public float lookOrigin;
     public GameObject bulletSpawn;
 
     private void Start()
@@ -26,7 +27,7 @@ public class TrackingSystem : MonoBehaviour
         {
             if (hit.collider.tag == "Wall" || hit.collider.tag == "Ground")
             {
-                lookAtRotation = Quaternion.Euler(0f, 1f, 1f);// LookRotation(Vector3.forward, Vector3.up);
+                lookAtRotation = Quaternion.Euler(0f, lookOrigin, 0f);// LookRotation(Vector3.forward, Vector3.up);
 
                 if (transform.rotation != lookAtRotation)
                 {

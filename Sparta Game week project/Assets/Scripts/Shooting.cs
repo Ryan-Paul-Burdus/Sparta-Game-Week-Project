@@ -11,6 +11,7 @@ public class Shooting : MonoBehaviour
     
 
     private GameObject playerCamera;
+    private GameObject gunHolder;
 
     private float waitTime;
     public string gunType;
@@ -36,28 +37,31 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && canShoot && !gunType.Equals("SMG"))
+        if (!MenuSystem.isPaused)
         {
-            if (gunType.Equals("Pistol")) { waitTime = 0.5f; }
-            if (currentAmmo > 0)
+            if (Input.GetMouseButtonDown(0) && canShoot && !gunType.Equals("SMG"))
             {
-                StartCoroutine(Shoot());
+                if (gunType.Equals("Pistol")) { waitTime = 0.5f; }
+                if (currentAmmo > 0)
+                {
+                    StartCoroutine(Shoot());
+                }
+                if (this.currentAmmo <= 0) { StartCoroutine(Reload()); }
             }
-            if (this.currentAmmo <= 0) { StartCoroutine(Reload()); }
-        }
-        if (Input.GetMouseButton(0) && canShoot && !gunType.Equals("Pistol"))
-        {
-            if (gunType.Equals("SMG")) { waitTime = 0.1f; }
-            if (currentAmmo > 0)
+            if (Input.GetMouseButton(0) && canShoot && !gunType.Equals("Pistol"))
             {
-                StartCoroutine(Shoot());
+                if (gunType.Equals("SMG")) { waitTime = 0.1f; }
+                if (currentAmmo > 0)
+                {
+                    StartCoroutine(Shoot());
+                }
             }
-        }
 
-        if (Input.GetKeyDown(KeyCode.R) || this.currentAmmo <= 0)
-        {
-            Debug.Log("R");
-            StartCoroutine(Reload());
+            if (Input.GetKeyDown(KeyCode.R) || this.currentAmmo <= 0)
+            {
+                Debug.Log("R");
+                StartCoroutine(Reload());
+            }
         }
     }
 
