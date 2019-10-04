@@ -9,21 +9,12 @@
 ## Screenshots
 
 - Color changing platforms
-![alt text]()
+![alt text](https://github.com/Ryan-Paul-Burdus/Sparta-Game-Week-Project/blob/master/Screenshots/Blue%20platform.png "Blue platform")
+![alt text](https://github.com/Ryan-Paul-Burdus/Sparta-Game-Week-Project/blob/master/Screenshots/Red%20platform.png "Red platform")
 
 - AI enemy turret
-![alt text]()
+![alt text](https://github.com/Ryan-Paul-Burdus/Sparta-Game-Week-Project/blob/master/Screenshots/AI%20turret.png "AI turret")
 
 - Pick-ups
-![alt text]()
-
-
-## Videos
-
-- Color changing feature
-
-
-- AI enemy turret 
-
-
-- Moving platforms
+![alt text](https://github.com/Ryan-Paul-Burdus/Sparta-Game-Week-Project/blob/master/Screenshots/Ammo%20and%20health.png "Ammo and health")
+![alt text](https://github.com/Ryan-Paul-Burdus/Sparta-Game-Week-Project/blob/master/Screenshots/Key.png "Key")
