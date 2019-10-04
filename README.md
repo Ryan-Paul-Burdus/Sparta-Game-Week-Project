@@ -9,6 +9,85 @@
  
  All code and models used within this game have been created by myself (Ryan Burdus) and nobody else.
  
+## Code Highlights 
+
+- AI turret Tracking 
+```C#
+RaycastHit hit;
+        if (Physics.Raycast(bulletSpawn.transform.position, targetBody.transform.position - bulletSpawn.transform.position, out hit, Mathf.Infinity))
+        {
+            if (hit.collider.tag == "Wall" || hit.collider.tag == "Ground")
+            {
+                lookAtRotation = Quaternion.Euler(0f, lookOrigin, 0f);// LookRotation(Vector3.forward, Vector3.up);
+
+                if (transform.rotation != lookAtRotation)
+                {
+                    transform.rotation = Quaternion.RotateTowards(transform.rotation, lookAtRotation, speed * Time.deltaTime);
+                }
+            }
+            else
+            {
+                if (target)
+                {
+                    if (lastKnownPosition != target.transform.position)
+                    {
+                        lastKnownPosition = target.transform.position;
+                        lookAtRotation = Quaternion.LookRotation(lastKnownPosition - transform.position, Vector3.up);
+                    }
+                    if (transform.rotation != lookAtRotation)
+                    {
+                        transform.rotation = Quaternion.RotateTowards(transform.rotation, lookAtRotation, speed * Time.deltaTime);
+                    }
+                }
+            }
+        }
+```
+
+- Color changing feature
+```C#
+private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            player.GetComponent<MeshRenderer>().material = this.GetComponent<MeshRenderer>().material;
+            foreach (GameObject platform in platforms)
+            {
+
+                if (this.GetComponent<MeshRenderer>().material.name.Contains(platform.GetComponent<MeshRenderer>().material.name))
+                {
+                    platform.GetComponent<BoxCollider>().enabled = true;
+                }
+                else
+                {
+                    platform.GetComponent<BoxCollider>().enabled = false;
+                }
+            }
+        }
+    }
+```
+
+- Code based moving platforms
+```C#
+if (lastOnPos1) { transform.position = Vector3.MoveTowards(transform.position, position2.transform.position, speed * Time.deltaTime); }
+        else { transform.position = Vector3.MoveTowards(transform.position, position1.transform.position, speed * Time.deltaTime); }
+```
+
+- Shooting 
+```C#
+IEnumerator Shoot()
+    {
+        GameObject instBullet = Instantiate(bullet, transform.position, playerCamera.transform.rotation) as GameObject;
+        this.currentAmmo--;
+        ammoText.text = "Ammo = " + this.currentAmmo + "/" + this.totalAmmo;
+        Rigidbody instBulletRb = instBullet.GetComponent<Rigidbody>();
+        instBulletRb.AddForce(playerCamera.transform.forward * speed);
+        Destroy(instBullet, 5f);
+        canShoot = false;
+        yield return new WaitForSeconds(waitTime);
+        canShoot = true;
+    }
+```
+ 
 ## How to run the game
  - To run the program you will need to have Unity 2019.2.3f1 installed on your computer and to load up the project once this is finished.
 
