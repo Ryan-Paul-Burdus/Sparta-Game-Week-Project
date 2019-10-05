@@ -8,7 +8,7 @@
  
  The player will be able to pick up certain items such as coins, ammo, and health throughout the game and will have multiple different guns to help eliminate enemies that are found throughout certain levels. There are multiple levels for the game at this stage and each has its own level design.
  
- All code and models used within this game have been created by myself (Ryan Burdus) and nobody else.
+ **All code and models used within this game have been created by myself (Ryan Burdus) and nobody else.**
  
 ## Code Highlights 
 
